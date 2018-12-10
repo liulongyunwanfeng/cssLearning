@@ -1,0 +1,11 @@
+git 命令
+git init
+git config --global user.name "liulongyun"
+git config --global user.email "liulongyunwanfeng@163.com"
+git add xxx.text
+git commit -m "初始导入"
+git status
+git diff
+git log --pretty=oneline
+git reset --hard "HEAD^"
+git reset --hard 版本号
