@@ -78,6 +78,12 @@ $ git branch dev（创建dev分支）
 $ git checkout dev（切换到dev分支）
 Switched to branch 'dev'
 
+用git branch 查看所有分支，当前分支钱还有*
+$ git branch
+* dev
+  master
+
+
 
 
 
