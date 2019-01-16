@@ -64,6 +64,25 @@ git 克隆
 $ git clone git@github.com:michaelliao/gitskills.git
 
 
+git分支学习
+学习连接
+https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375840038939c291467cc7c747b1810aab2fb8863508000
+
+相关命令
+创建分支(dev分支)
+$ git checkout -b dev
+Switched to a new branch 'dev'
+git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+
+$ git branch dev（创建dev分支）
+$ git checkout dev（切换到dev分支）
+Switched to branch 'dev'
+
+
+
+
+
+
 
 
 
