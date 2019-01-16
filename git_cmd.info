@@ -93,6 +93,9 @@ git merge dev
 删除git分支
 $ git branch -d dev
 
+git分支合并解决冲突
+
+
 
 
 
