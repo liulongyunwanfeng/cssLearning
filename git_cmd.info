@@ -28,3 +28,45 @@ git 删除文件
 删除也是一个修改操作，你删除之后 add commit 即可
 2：有一些工程文件我们不是要删除，而是不想git 管理它，但是之前因为没注意，将其纳入了git管理了，怎么办
 用 git rm filename删除，再commit
+
+
+
+git远程仓库学习（以github为例）
+注册git账户
+
+第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，
+如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
+$ ssh-keygen -t rsa -C "youremail@example.com"
+
+第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：
+然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+
+在github上创建远程仓库（如仓库地址为：git@github.com:michaelliao/learngit.git）
+
+将本地库和远程库关联
+在本地库目录下执行
+$ git remote add origin git@github.com:michaelliao/learngit.git
+
+
+把本地库的所有内容推送到远程库上：
+$ git push -u origin master
+
+把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。
+
+由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，
+还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+以后推送远程就可以直接用
+$ git push  origin master
+
+git 克隆
+假设我们从零开发，那么最好的方式是先创建远程库，然后，从远程库克隆。
+
+$ git clone git@github.com:michaelliao/gitskills.git
+
+
+
+
+
+
+
+
