@@ -86,7 +86,12 @@ $ git branch
 切换分支
 git checkout dev（需要切换到的分支）
 
+合并分支
+git merge dev
+将值得的分支（dev）合并到当前分支上
 
+删除git分支
+$ git branch -d dev
 
 
 
