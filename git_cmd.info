@@ -83,7 +83,8 @@ $ git branch
 * dev
   master
 
-
+切换分支
+git checkout dev（需要切换到的分支）
 
 
 
