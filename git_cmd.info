@@ -92,6 +92,12 @@ git checkout dev（需要切换到的分支）
 git merge dev
 将值得的分支（dev）合并到当前分支上
 
+直接这样合并，查询不到合并日志，因为合并的时候没有创建提交日志
+git merge --no-ff dev
+添加 --no-ff参数表示不使用快速模式合并，会在合并的时候创建一个提交记录，以后查看日志的时候能查看到分支合并日志
+
+git log --graph——以图表形式查看分支
+
 删除git分支
 $ git branch -d dev
 
