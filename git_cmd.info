@@ -57,8 +57,32 @@ $ git remote add origin git@github.com:michaelliao/learngit.git
 
 把本地库的所有内容推送到远程库上：
 $ git push -u origin master
+像这样执行git push命令，当前分支的内容就会被推送给远程仓库 origin 的master 分支。
+-u参数可以在推送的同时，将origin 仓库的master 分
+支设置为本地仓库当前分支的upstream（上游）。添加了这个参数，将来
+运行git pull命令从远程仓库获取内容时，本地仓库的这个分支就可
+以直接从origin 的master 分支获取内容，省去了另外添加参数的麻烦。
 
 把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。
+
+
+推送至master 以外的分支
+    除了master 分支之外，远程仓库也可以创建其他分支。举个例子，我
+    们在本地仓库中创建feature-D 分支，并将它以同名形式push 至远程仓库。
+    $ git checkout -b feature-D
+    Switched to a new branch 'feature-D'
+    我们在本地仓库中创建了feature-D 分支，现在将它push 给远程仓
+    库并保持分支名称不变。
+    $ git push -u origin feature-D
+    Total 0 (delta 0), reused 0 (delta 0)
+    To git@github.com:github-book/git-tutorial.git
+    * [new branch] feature-D -> feature-D
+    Branch feature-D set up to track remote branch feature-D from origin.
+    现在，在远程仓库的GitHub 页面就可以查看到feature-D 分支了。
+
+
+
+
 
 由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，
 还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
@@ -69,6 +93,21 @@ git 克隆
 假设我们从零开发，那么最好的方式是先创建远程库，然后，从远程库克隆。
 
 $ git clone git@github.com:michaelliao/gitskills.git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 git分支学习
@@ -123,4 +162,6 @@ update on feature-c1
 update on feature-B 1
 
 feature-lly
+
+
 
