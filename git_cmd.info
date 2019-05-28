@@ -94,6 +94,24 @@ git 克隆
 
 $ git clone git@github.com:michaelliao/gitskills.git
 
+执行git clone命令后我们会默认处于master 分支下，同时系统
+会自动将origin 设置成该远程仓库的标识符。也就是说，当前本地仓库
+的master 分支与GitHub 端远程仓库（origin）的master 分支在内容上是
+完全相同的。
+
+
+获取远程的feature-lly 分支
+
+我们试着将feature-lly 分支获取至本地仓库。
+$ git checkout -b feature-lly origin/feature-lly
+Branch feature-lly set up to track remote branch feature-lly from origin.
+Switched to a new branch 'feature-lly'
+-b 参数的后面是本地仓库中新建分支的名称。为了便于理解，我
+们仍将其命名为feature-lly，让它与远程仓库的对应分支保持同名。新建
+分支名称后面是获取来源的分支名称。例子中指定了origin/feature-lly，
+就是说以名为origin 的仓库（这里指GitHub 端的仓库）的feature-lly 分
+支为来源，在本地仓库中创建feature-lly 分支
+
 
 
 
