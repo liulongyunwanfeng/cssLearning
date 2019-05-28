@@ -114,6 +114,7 @@ git commit --amend——修改提交信息
 要修改上一条提交信息，可以使用git commit --amend命令。执行上面的命令后，编辑器就会启动。
 feature-B上修改
 update on feature-c
+update on feature-c1
 
 
 
