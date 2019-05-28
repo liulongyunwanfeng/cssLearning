@@ -4,6 +4,11 @@ git config --global user.name "liulongyun"
 git config --global user.email "liulongyunwanfeng@163.com"
 git add xxx.text
 git commit -m "初始导入"
+
+# git commit -am 一般用于对一个简单的修改之后就想直接提交
+# 相当于git add 和git commit
+git commit -am "Add feature-C"
+
 git status
 git diff
 git log --pretty=oneline
